@@ -1,0 +1,24 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-family: $font-primary;
+}
+
+
+h1 {
+    @include main-heading;
+}
+
+h2 {
+    @include h2-style;
+}
+

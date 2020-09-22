@@ -1,0 +1,45 @@
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 180px;
+    gap: $pad - 10;
+    padding: $pad;
+}
+
+.contact-title {
+    margin: 0;
+    text-align: center;
+    padding-top: $pad;
+}
+
+.address-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgr-about;
+    box-shadow: 2px 2px 2px 1px rgb(163, 163, 163);
+    padding: $pad - 10 0;
+}
+
+.address-img {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.address-title,
+.address-info {
+    margin: 0;
+    padding-top: $pad - 10;  
+}
+
+.address-phone,
+.address-email {
+    color: black;
+
+    &:hover,
+    &:focus {
+        color: $link-color;
+    }
+}

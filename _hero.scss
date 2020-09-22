@@ -1,0 +1,39 @@
+.hero {
+    min-height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url("images/hero.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-title {
+    margin: 0;
+    font-size: clamp(2rem, 10vw, 4rem);
+}
+
+.hero-info {
+    font-size: clamp(1rem, 3.5vw, 2rem);
+    font-family: $font-primary;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-link {
+    display: block;
+    text-transform: uppercase;
+    color: black;
+    padding: $pad;
+    text-decoration: none;
+    border: 2px solid $btn-color;
+    font-weight: 700;
+
+    &:hover, 
+    &:focus {
+        background-color: $btn-color;
+        transition: 0.3s ease-in-out;
+    }
+}

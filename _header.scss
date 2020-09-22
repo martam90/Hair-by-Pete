@@ -1,0 +1,26 @@
+.navbar {
+    display: block;
+    background-color: $bgr-menu;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 0;
+    padding-top: $pad - 10;
+    margin: 0;
+}
+
+.menu-item {
+    padding: $pad - 10 0;
+    display: block;
+    text-decoration: none;
+    color: $btn-color;
+
+    &:hover,
+    &:focus {
+        color: $basic-color;
+        background-color: $bth-hover;
+        transition: 0.3s ease-in-out;
+    }
+}
