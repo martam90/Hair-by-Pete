@@ -6,20 +6,24 @@
         align-items: center;
         justify-content: space-between;
         padding: $pad - 10;
+
+        .fas {
+            display: none;
+        }
     }
 
     .menu {
         display: flex;
         gap: $pad - 10;
         padding-top: 0;
-    }
 
-    .menu-item {
-        padding: $pad - 10;
-    
-        &:hover,
-        &:focus {
-            background-color: $bgr-menu;
+        .menu-item {
+            padding: $pad - 10;
+        
+            &:hover,
+            &:focus {
+                background-color: $bgr-menu;
+            }
         }
     }
 
