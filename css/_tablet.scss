@@ -1,0 +1,98 @@
+/* header */
+
+@media (min-width: 768px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $pad - 10;
+
+        .fas {
+            display: none;
+        }
+    }
+
+    .menu {
+        display: flex;
+        gap: $pad - 10;
+        padding-top: 0;
+
+        .menu-item {
+            padding: $pad - 10;
+        
+            &:hover,
+            &:focus {
+                background-color: $bgr-menu;
+            }
+        }
+    }
+
+    /* about */ 
+    
+    .about-pete {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: $pad - 10;
+        justify-items: center;
+    }
+
+    .about-title {
+        grid-column: 1 / 3;
+    }
+
+    .about-info {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .about-img {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+
+    /* pricing */
+
+    .pricing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: $pad;
+    }
+
+    .price-list-title {
+        grid-column: 1 / 3;
+    }
+    
+    .price-list-img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* footer */
+
+    footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, 100px);
+
+        .footer-info {
+            grid-column: 2 / 3;
+            grid-row: 1 / 4; 
+        }
+    
+        .footer-map {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            place-self: center;
+        }
+
+        .footer-icons {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4; 
+        }
+    }
+
+    
+}

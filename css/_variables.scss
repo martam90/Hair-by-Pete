@@ -1,0 +1,43 @@
+$pad: 20px;
+$font-primary: 'Rubik', sans-serif;
+$btn-color: #ffc600;
+$bth-hover: rgb(73, 72, 72);
+$bgr-menu: #000; 
+$basic-color: #fff;
+$link-color: #ff7400;
+
+$font-basic: 1.2rem;
+
+$text-size: clamp(0.9rem, 3vw, 1rem); /* k textum u about, ceniku */
+
+$bgr-about:#eeeedd; /* about section + items contact */
+
+$border-color: #ffa600; /* border u obrazku*/
+
+
+@mixin main-heading {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffc600;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+@mixin h2-style {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffc600;
+    font-size: clamp(2rem, 5vw, 3rem); 
+}
+
+
+@mixin footer {
+    background-color: rgb(0, 0, 0);
+    padding: $pad;
+    font-size: 0.8rem;
+    color: rgb(243, 230, 230);
+}
+
+/* social media color*/
+
+$fb: #3B5998;
+$instagram: #125688;
+$pinterest: #cb2027;
