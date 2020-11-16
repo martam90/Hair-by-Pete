@@ -30,10 +30,11 @@
     text-decoration: none;
     border: 2px solid $btn-color;
     font-weight: 700;
+    transition: linear 500ms;
 
     &:hover,
     &:focus {
         background-color: $btn-color;
-        transition: 0.3s ease-in-out;
+        transition: linear 500ms;
     }
 }

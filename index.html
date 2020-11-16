@@ -14,38 +14,49 @@
             integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="css/style.css" />
-
-        <script>
-            // hamburger menu
-            function showMenu() {
-                var menu = document.getElementById("menu");
-                if (menu.style.display == "none") {
-                    menu.style.display = "block";
-                } else {
-                    menu.style.display = "none";
-                }
-            }
-        </script>
+        <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body>
         <div class="wrapper">
-            <header class="navbar">
-                <div class="navbar-img">
-                    <img
-                        class="logo"
-                        src="images/logo.png"
-                        alt="Logo Hair by Pete"
-                    />
-                    <i onclick="showMenu()" class="fas fa-bars"></i>
+            <header>
+                <nav class="navbar">
+                    <div class="navbar-img">
+                        <img
+                            class="logo"
+                            src="images/logo.png"
+                            alt="Logo Hair by Pete"
+                        />
+                    </div>
+                <div class="overlay" id="myNav">
+                    <ul class="menu">
+                        <button class="nav-close" type="button"></button>
+                        <li><a class="menu-item" href="#about">About</a></li>
+                        <li>
+                            <a class="menu-item" href="#pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
                 </div>
-
-                <ul id="menu" class="menu">
-                    <li><a class="menu-item" href="#about">About</a></li>
-                    <li><a class="menu-item" href="#pricing">Pricing</a></li>
-                    <li><a class="menu-item" href="#contact">Contact</a></li>
-                </ul>
+                <button class="nav-open" type="button"></button>
             </header>
+
+            <!--hamburger menu-->
+            <script>
+                const navOpen = document.querySelector('.nav-open');
+                const navClose = document.querySelector('.nav-close');
+
+                navOpen.addEventListener('click', () => {
+                    document.getElementById("myNav").style.width = "100%";
+                })
+
+                navClose.addEventListener('click', () => {
+                    document.getElementById("myNav").style.width = "0%";
+                })
+
+            </script>
 
             <section class="hero">
                 <h1 class="hero-title">Hair by Pete</h1>
@@ -53,6 +64,7 @@
                 <a class="hero-link" href="#">Make a reservation</a>
             </section>
 
+        <main>
             <section class="about-pete">
                 <h2 id="about" class="about-title">About</h2>
 
@@ -169,7 +181,7 @@
                     </div>
                 </div>
             </section>
-
+        </main>
             <footer>
                 <iframe
                     class="footer-map"

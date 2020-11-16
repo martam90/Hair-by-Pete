@@ -5,9 +5,12 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -20,66 +23,92 @@ body {
 }
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #ffc600;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #ffc600;
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
+.overlay {
+  background-color: #000;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: ease 500ms;
+  transition: ease 500ms;
+}
+
 .navbar {
   background-color: #000;
-}
-
-.navbar .navbar-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 20px;
-}
-
-.navbar .navbar-img .fas {
-  font-size: 50px;
-  color: #fff;
-}
-
-.navbar .navbar-img .fas:hover {
-  color: #ffc600;
-  cursor: pointer;
+  padding: 10px;
 }
 
 .menu {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
   padding-left: 0;
-  padding-top: 10px;
-  margin: 0;
+  margin-top: 50px;
 }
 
 .menu .menu-item {
-  padding: 10px;
   display: block;
-  width: 100%;
+  color: #fff;
   text-decoration: none;
+  padding: 30px 20px;
+  font-size: 3.2rem;
+}
+
+.menu .menu-item:hover {
   color: #ffc600;
 }
 
-.menu .menu-item:hover, .menu .menu-item:focus {
-  color: #fff;
-  background-color: #494848;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+.nav-open,
+.nav-close {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.nav-open:hover,
+.nav-close:hover {
+  color: #ffc600;
+}
+
+.nav-open::after {
+  content: "\2630";
+}
+
+.nav-close::after {
+  content: "\2716";
 }
 
 .hero {
@@ -124,12 +153,14 @@ h2 {
   text-decoration: none;
   border: 2px solid #ffc600;
   font-weight: 700;
+  -webkit-transition: linear 500ms;
+  transition: linear 500ms;
 }
 
 .hero-link:hover, .hero-link:focus {
   background-color: #ffc600;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: linear 500ms;
+  transition: linear 500ms;
 }
 
 .pricing {
@@ -344,7 +375,7 @@ footer .tel-contact:hover, footer .tel-contact:focus {
 }
 
 .fa-facebook:hover {
-  color: #3B5998;
+  color: #3b5998;
 }
 
 .fa-instagram:hover {
@@ -355,36 +386,7 @@ footer .tel-contact:hover, footer .tel-contact:focus {
   color: #cb2027;
 }
 
-/* header */
 @media (min-width: 768px) {
-  .navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 10px;
-  }
-  .navbar .fas {
-    display: none;
-  }
-  .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 10px;
-    padding-top: 0;
-  }
-  .menu .menu-item {
-    padding: 10px;
-  }
-  .menu .menu-item:hover, .menu .menu-item:focus {
-    background-color: #000;
-  }
   /* about */
   .about-pete {
     display: -ms-grid;
@@ -479,6 +481,8 @@ footer .tel-contact:hover, footer .tel-contact:focus {
   bottom: 5px;
   right: 5px;
   z-index: 1;
+  border: none;
+  outline: none;
   font-size: 1.7rem;
   background-color: #ffc600;
   color: black;

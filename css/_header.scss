@@ -1,43 +1,64 @@
+.overlay {
+    background-color: $bgr-menu;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: ease 500ms;
+}
+
 .navbar {
     background-color: $bgr-menu;
+    padding: $pad - 10;
+}
 
-    .navbar-img {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 $pad;
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    margin-top: $pad + 30;
 
-        .fas {
-            font-size: 50px;
-            color: $basic-color;
+    .menu-item {
+        display: block;
+        color: $basic-color;
+        text-decoration: none;
+        padding: $pad + 10 $pad;
+        font-size: $font-basic + 2rem;
 
-            &:hover {
-                color: $btn-color;
-                cursor: pointer;
-            }
+        &:hover {
+            color: $btn-color;
         }
     }
 }
 
-.menu {
-    display: none;
-    list-style: none;
-    padding-left: 0;
-    padding-top: $pad - 10;
-    margin: 0;
+.nav-open,
+.nav-close {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    background-color: inherit;
 
-    .menu-item {
-        padding: $pad - 10;
-        display: block;
-        width: 100%;
-        text-decoration: none;
+    &:hover {
         color: $btn-color;
-
-        &:hover,
-        &:focus {
-            color: $basic-color;
-            background-color: $bth-hover;
-            transition: 0.3s ease-in-out;
-        }
     }
+}
+
+.nav-open::after {
+    content: "\2630";
+}
+
+.nav-close::after {
+    content: "\2716";
 }
