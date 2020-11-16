@@ -2,7 +2,9 @@ html {
     box-sizing: border-box;
 }
 
-*, ::before, ::after {
+*,
+::before,
+::after {
     box-sizing: inherit;
 }
 
@@ -13,7 +15,6 @@ body {
     font-family: $font-primary;
 }
 
-
 h1 {
     @include main-heading;
 }
@@ -21,4 +22,3 @@ h1 {
 h2 {
     @include h2-style;
 }
-

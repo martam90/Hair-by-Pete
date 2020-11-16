@@ -6,15 +6,15 @@
     align-items: center;
     background-color: $bgr-about;
 
-        .about-title {
-            margin: 0;
-            padding-bottom: $pad - 10;
-        }
+    .about-title {
+        margin: 0;
+        padding-bottom: $pad - 10;
+    }
 
-        .about-info {
-            line-height: 1.8;
-            font-size: $text-size;
-        }
+    .about-info {
+        line-height: 1.8;
+        font-size: $text-size;
+    }
 }
 
 .about-img {
@@ -24,4 +24,3 @@
     border-radius: 50%;
     width: 50%;
 }
-

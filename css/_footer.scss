@@ -18,7 +18,7 @@ footer {
 
     .tel-contact {
         color: rgb(243, 230, 230);
-    
+
         &:hover,
         &:focus {
             color: $link-color;
@@ -42,8 +42,8 @@ footer {
     .fab {
         font-size: $font-basic + 0.5rem;
         color: $basic-color;
-    }  
-}      
+    }
+}
 
 .fa-facebook:hover {
     color: $fb;

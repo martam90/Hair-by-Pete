@@ -1,166 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair by Pete</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hair by Pete</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Rubik&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+            integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/style.css" />
 
-    <script>
-        // hamburger menu
-        function showMenu() {
-            var menu = document.getElementById("menu");
-            if (menu.style.display == "none") {
-                menu.style.display = "block";
-            } else {
-                menu.style.display = "none";
+        <script>
+            // hamburger menu
+            function showMenu() {
+                var menu = document.getElementById("menu");
+                if (menu.style.display == "none") {
+                    menu.style.display = "block";
+                } else {
+                    menu.style.display = "none";
+                }
             }
-        }
-    </script>
-</head>
-<body>
-
-
-    <div class="wrapper">
-        
-        <header class="navbar">
-
-            <div class="navbar-img">
-                <img class="logo" src="images/logo.png" alt="Logo Hair by Pete">
-                <i onclick="showMenu()" class="fas fa-bars"></i>
-            </div>
-
-            <ul id="menu" class="menu">
-                <li><a class="menu-item" href="#about">About</a></li>
-                <li><a class="menu-item" href="#pricing">Pricing</a></li>
-                <li><a class="menu-item" href="#contact">Contact</a></li>
-            </ul>
-
-        </header>
-
-
-        <section class="hero">
-            <h1 class="hero-title">Hair by Pete</h1>
-            <p class="hero-info">Newly opened hair salon in Prague</p>
-            <a class="hero-link" href="#">Make a reservation</a>
-        </section>
-
-
-        <section class="about-pete">
-
-            <h2 id="about" class="about-title">About</h2>
-
-            <img loading="lazy" class="about-img" src="images/about.jpg" alt="Pete photo">
-
-            <p class="about-info">
-            I am Pete and I am your hairdresser. I don't take the profession as a job but as a hobby and
-            therefore I try to do my services as best I can. I want each of my client
-            to leave satisfied and with a good feeling. In my hair salon, you will always find a friendly
-            atmosphere and a pleasant service.
-            </p>
-            
-        </section>
-
-
-        <section class="pricing">
-
-            <h2 id="pricing" class="price-list-title">Pricing</h2>
-
-            <ul class="price-list">
-                <li class="price-list-item">Gents cut from <b>389&nbsp;KČ</b></li>
-                <li class="price-list-item">Ladies cut from <b>789&nbsp;KČ</b></li>
-                <li class="price-list-item">Color/tint from <b>999&nbsp;KČ</b></li>
-                <li class="price-list-item">Festive hairdo from <b>999&nbsp;KČ</b></li>
-                <li class="price-list-item">Highlights from <b>1099&nbsp;KČ</b></li>
-                <li class="price-list-item">Permanent straightening from <b>999&nbsp;KČ</b></li>
-                <li class="price-list-item">Gents color from <b>499&nbsp;KČ</b></li>
-                <li class="price-list-item">Kids cut (up to 8 years old) <b>569&nbsp;KČ</b></li>
-            </ul>
-            
-            <img loading="lazy" class="price-list-img" src="images/price-500.jpg"
-            srcset="
-                    images/price-500.jpg 500w,
-                    images/price-1000.jpg 1000w,
-                    images/price-1500.jpg 1500w"
-            sizes="(min-width: 640px) 50vw"    
-            alt="Woman with haircut">
-
-        </section>
-
-        
-        <h2 id="contact" class="contact-title">Contact</h2>
-
-        <section class="contact">
-            
-            <div class="address-item">
-                <img class="address-img" src="images/address.svg" alt="address">
-                <h3 class="address-title">Address</h3>
-                <div class="address-info">
-                    <p class="address-details">Prazska 88, Praha 11100</p>
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="navbar">
+                <div class="navbar-img">
+                    <img
+                        class="logo"
+                        src="images/logo.png"
+                        alt="Logo Hair by Pete"
+                    />
+                    <i onclick="showMenu()" class="fas fa-bars"></i>
                 </div>
-            </div>
 
-            <div class="address-item">
-                <img class="address-img" src="images/phone.svg" alt="phone">
-                <h3 class="address-title">Contact</h3>
-                <div class="address-info">
-                    <p class="address-details">Tel:<a class="address-phone" href="tel:+420 123456910">+420 123456910</a></p>
-                    <p class="address-details">E-mail:<a class="address-email"href="mailto: hairbypete@gmail.com">hairbypete@gmail.com</a></p>
+                <ul id="menu" class="menu">
+                    <li><a class="menu-item" href="#about">About</a></li>
+                    <li><a class="menu-item" href="#pricing">Pricing</a></li>
+                    <li><a class="menu-item" href="#contact">Contact</a></li>
+                </ul>
+            </header>
+
+            <section class="hero">
+                <h1 class="hero-title">Hair by Pete</h1>
+                <p class="hero-info">Newly opened hair salon in Prague</p>
+                <a class="hero-link" href="#">Make a reservation</a>
+            </section>
+
+            <section class="about-pete">
+                <h2 id="about" class="about-title">About</h2>
+
+                <img
+                    loading="lazy"
+                    class="about-img"
+                    src="images/about.jpg"
+                    alt="Pete photo"
+                />
+
+                <p class="about-info">
+                    I am Pete and I am your hairdresser. I don't take the
+                    profession as a job but as a hobby and therefore I try to do
+                    my services as best I can. I want each of my client to leave
+                    satisfied and with a good feeling. In my hair salon, you
+                    will always find a friendly atmosphere and a pleasant
+                    service.
+                </p>
+            </section>
+
+            <section class="pricing">
+                <h2 id="pricing" class="price-list-title">Pricing</h2>
+
+                <ul class="price-list">
+                    <li class="price-list-item">
+                        Gents cut from <b>389&nbsp;KČ</b>
+                    </li>
+                    <li class="price-list-item">
+                        Ladies cut from <b>789&nbsp;KČ</b>
+                    </li>
+                    <li class="price-list-item">
+                        Color/tint from <b>999&nbsp;KČ</b>
+                    </li>
+                    <li class="price-list-item">
+                        Festive hairdo from <b>999&nbsp;KČ</b>
+                    </li>
+                    <li class="price-list-item">
+                        Highlights from <b>1099&nbsp;KČ</b>
+                    </li>
+                    <li class="price-list-item">
+                        Permanent straightening from <b>999&nbsp;KČ</b>
+                    </li>
+                    <li class="price-list-item">
+                        Gents color from <b>499&nbsp;KČ</b>
+                    </li>
+                    <li class="price-list-item">
+                        Kids cut (up to 8 years old) <b>569&nbsp;KČ</b>
+                    </li>
+                </ul>
+
+                <img
+                    loading="lazy"
+                    class="price-list-img"
+                    src="images/price-500.jpg"
+                    srcset="
+                        images/price-500.jpg   500w,
+                        images/price-1000.jpg 1000w,
+                        images/price-1500.jpg 1500w
+                    "
+                    sizes="(min-width: 640px) 50vw"
+                    alt="Woman with haircut"
+                />
+            </section>
+
+            <h2 id="contact" class="contact-title">Contact</h2>
+
+            <section class="contact">
+                <div class="address-item">
+                    <img
+                        class="address-img"
+                        src="images/address.svg"
+                        alt="address"
+                    />
+                    <h3 class="address-title">Address</h3>
+                    <div class="address-info">
+                        <p class="address-details">Prazska 88, Praha 11100</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="address-item">
-                <img class="address-img" src="images/clock.svg" alt="opening hours icon">
-                <h3 class="address-title">Opening hours</h3>
-                <div class="address-info">
-                    <p class="address-details">Mo-Fri 9AM - 18PM</p>
+                <div class="address-item">
+                    <img
+                        class="address-img"
+                        src="images/phone.svg"
+                        alt="phone"
+                    />
+                    <h3 class="address-title">Contact</h3>
+                    <div class="address-info">
+                        <p class="address-details">
+                            Tel:<a
+                                class="address-phone"
+                                href="tel:+420 123456910"
+                                >+420 123456910</a
+                            >
+                        </p>
+                        <p class="address-details">
+                            E-mail:<a
+                                class="address-email"
+                                href="mailto: hairbypete@gmail.com"
+                                >hairbypete@gmail.com</a
+                            >
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-        </section>
+                <div class="address-item">
+                    <img
+                        class="address-img"
+                        src="images/clock.svg"
+                        alt="opening hours icon"
+                    />
+                    <h3 class="address-title">Opening hours</h3>
+                    <div class="address-info">
+                        <p class="address-details">Mo-Fri 9AM - 18PM</p>
+                    </div>
+                </div>
+            </section>
 
+            <footer>
+                <iframe
+                    class="footer-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.9427236080355!2d14.51294614014716!3d50.10607903465124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470becd17226078b%3A0x1be476051b126637!2sFitness%20louka%20Rokytka!5e0!3m2!1scs!2scz!4v1600536738492!5m2!1scs!2scz"
+                    width="300"
+                    height="300"
+                    frameborder="0"
+                    style="border: 0"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0"
+                ></iframe>
 
-        <footer>
+                <div class="footer-info">
+                    <h3 class="footer-title">Hair by Pete</h3>
+                    <p class="footer-address">Prazska 88, Praha 11100</p>
+                    <p class="footer-contact">
+                        Tel:<a class="tel-contact" href="tel:+420 123456910"
+                            >+420 123456910</a
+                        >
+                    </p>
+                </div>
+                <div class="footer-icons">
+                    <a href="#" class="icon-item"
+                        ><i class="fab fa-facebook"></i
+                    ></a>
+                    <a href="#" class="icon-item"
+                        ><i class="fab fa-pinterest"></i
+                    ></a>
+                    <a href="#" class="icon-item"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+                </div>
+            </footer>
+        </div>
 
-            <iframe class="footer-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.9427236080355!2d14.51294614014716!3d50.10607903465124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470becd17226078b%3A0x1be476051b126637!2sFitness%20louka%20Rokytka!5e0!3m2!1scs!2scz!4v1600536738492!5m2!1scs!2scz" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <!--scroll button-->
+        <button
+            onclick="topFunction()"
+            id="myBtn"
+            class="top-btn"
+            title="Go to the Top"
+        >
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <script>
+            var mybutton = document.getElementById("myBtn");
 
-            <div class="footer-info">
-                <h3 class="footer-title">Hair by Pete</h3>
-                <p class="footer-address">Prazska 88, Praha 11100</p>
-                <p class="footer-contact">Tel:<a class="tel-contact" href="tel:+420 123456910">+420 123456910</a></p>
-            </div>
-            <div class="footer-icons">
-                <a href="#" class="icon-item"><i class="fab fa-facebook"></i></a>              
-                <a href="#" class="icon-item"><i class="fab fa-pinterest"></i></a>
-                <a href="#" class="icon-item"><i class="fab fa-instagram"></i></a>
-            </div>
-            
-        </footer> 
-        
-    </div>
-
-    <!--scroll button-->
-    <button onclick="topFunction()" id="myBtn" class="top-btn" title="Go to the Top"><i class="fas fa-arrow-up"></i></button>
-    <script>
-        var mybutton = document.getElementById("myBtn");
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
+            function scrollFunction() {
+                if (
+                    document.body.scrollTop > 100 ||
+                    document.documentElement.scrollTop > 100
+                ) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
             }
-        }
 
-        window.onscroll = scrollFunction;
+            window.onscroll = scrollFunction;
 
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
-
-</body>
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </body>
 </html>

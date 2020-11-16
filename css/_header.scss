@@ -10,14 +10,13 @@
         .fas {
             font-size: 50px;
             color: $basic-color;
-        
+
             &:hover {
                 color: $btn-color;
                 cursor: pointer;
-            }    
+            }
         }
     }
-    
 }
 
 .menu {
@@ -33,7 +32,7 @@
         width: 100%;
         text-decoration: none;
         color: $btn-color;
-    
+
         &:hover,
         &:focus {
             color: $basic-color;
@@ -42,5 +41,3 @@
         }
     }
 }
-
-
