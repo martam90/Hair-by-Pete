@@ -14,58 +14,46 @@
             integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="css/style.css"/>
-        <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            href="images/favicon.ico"
+            rel="shortcut icon"
+            type="image/x-icon"
+        />
     </head>
     <body>
-        <div class="wrapper">
-            <header>
-                <nav class="navbar">
-                    <div class="navbar-img">
-                        <img
-                            class="logo"
-                            src="images/logo.png"
-                            alt="Logo Hair by Pete"
-                        />
-                    </div>
-                <div class="overlay" id="myNav">
-                    <ul class="menu">
-                        <button class="nav-close" type="button"></button>
-                        <li><a class="menu-item" href="#">About</a></li>
-                        <li>
-                            <a class="menu-item" href="#">Pricing</a>
-                        </li>
-                        <li>
-                            <a class="menu-item" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
+        <header>
+            <nav class="navbar">
+                <div class="navbar-img">
+                    <img
+                        class="logo"
+                        src="images/logo.png"
+                        alt="Logo Hair by Pete"
+                    />
                 </div>
-                <button class="nav-open" type="button"></button>
-            </header>
+                <ul class="menu">
+                    <button class="nav-toggle" type="button"></button>
+                    <li><a class="menu-item" href="#about">About</a></li>
+                    <li>
+                        <a class="menu-item" href="#pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="menu-item" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-            <!--hamburger menu-->
-            <script>
-                const navOpen = document.querySelector('.nav-open');
-                const navClose = document.querySelector('.nav-close');
+        <!--hamburger menu-->
+        <script src="menu.js"></script>
 
-                navOpen.addEventListener('click', () => {
-                    document.getElementById("myNav").style.width = "100%";
-                })
+        <section class="hero">
+            <h1 class="hero-title">Hair by Pete</h1>
+            <p class="hero-info">Newly opened hair salon in Prague</p>
+            <a class="hero-link" href="#">Make a reservation</a>
+        </section>
 
-                navClose.addEventListener('click', () => {
-                    document.getElementById("myNav").style.width = "0%";
-                })
-
-            </script>
-
-            <section class="hero">
-                <h1 class="hero-title">Hair by Pete</h1>
-                <p class="hero-info">Newly opened hair salon in Prague</p>
-                <a class="hero-link" href="#">Make a reservation</a>
-            </section>
-
-        <main>
+        <main id="about">
             <section class="about-pete">
                 <h2 class="about-title">About</h2>
 
@@ -86,7 +74,7 @@
                 </p>
             </section>
 
-            <section class="pricing">
+            <section class="pricing" id="pricing">
                 <h2 id="pricing" class="price-list-title">Pricing</h2>
 
                 <ul class="price-list">
@@ -132,7 +120,7 @@
 
             <h2 id="contact" class="contact-title">Contact</h2>
 
-            <section class="contact">
+            <section class="contact" id="contact">
                 <div class="address-item">
                     <img
                         class="address-img"
@@ -183,41 +171,40 @@
                 </div>
             </section>
         </main>
-            <footer>
-                <iframe
-                    class="footer-map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.9427236080355!2d14.51294614014716!3d50.10607903465124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470becd17226078b%3A0x1be476051b126637!2sFitness%20louka%20Rokytka!5e0!3m2!1scs!2scz!4v1600536738492!5m2!1scs!2scz"
-                    width="300"
-                    height="300"
-                    frameborder="0"
-                    style="border: 0"
-                    allowfullscreen=""
-                    aria-hidden="false"
-                    tabindex="0"
-                ></iframe>
+        <footer>
+            <iframe
+                class="footer-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.9427236080355!2d14.51294614014716!3d50.10607903465124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470becd17226078b%3A0x1be476051b126637!2sFitness%20louka%20Rokytka!5e0!3m2!1scs!2scz!4v1600536738492!5m2!1scs!2scz"
+                width="300"
+                height="300"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+            ></iframe>
 
-                <div class="footer-info">
-                    <h3 class="footer-title">Hair by Pete</h3>
-                    <p class="footer-address">Prazska 88, Praha 11100</p>
-                    <p class="footer-contact">
-                        Tel:<a class="tel-contact" href="tel:+420 123456910"
-                            >+420 123456910</a
-                        >
-                    </p>
-                </div>
-                <div class="footer-icons">
-                    <a href="#" class="icon-item"
-                        ><i class="fab fa-facebook"></i
-                    ></a>
-                    <a href="#" class="icon-item"
-                        ><i class="fab fa-pinterest"></i
-                    ></a>
-                    <a href="#" class="icon-item"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-                </div>
-            </footer>
-        </div>
+            <div class="footer-info">
+                <h3 class="footer-title">Hair by Pete</h3>
+                <p class="footer-address">Prazska 88, Praha 11100</p>
+                <p class="footer-contact">
+                    Tel:<a class="tel-contact" href="tel:+420 123456910"
+                        >+420 123456910</a
+                    >
+                </p>
+            </div>
+            <div class="footer-icons">
+                <a href="#" class="icon-item"
+                    ><i class="fab fa-facebook"></i
+                ></a>
+                <a href="#" class="icon-item"
+                    ><i class="fab fa-pinterest"></i
+                ></a>
+                <a href="#" class="icon-item"
+                    ><i class="fab fa-instagram"></i
+                ></a>
+            </div>
+        </footer>
 
         <!--scroll button-->
         <button
@@ -228,26 +215,6 @@
         >
             <i class="fas fa-arrow-up"></i>
         </button>
-        <script>
-            var mybutton = document.getElementById("myBtn");
-
-            function scrollFunction() {
-                if (
-                    document.body.scrollTop > 100 ||
-                    document.documentElement.scrollTop > 100
-                ) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
-            }
-
-            window.onscroll = scrollFunction;
-
-            function topFunction() {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
+        <script src="scroll.js"></script>
     </body>
 </html>
